@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+display: block;
+margin: 8px;
+min-width: 320px;
+text-rendering: optimizeLegibility;
+letter-spacing: -0.05em;
+font-size: 14px;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-color:  rgb(17,19,36);
+}
+
+
+.square{
+	display: block;
+    border: 1px solid black; // and all params
+}
+.square-a {
+    background-color: #65b9ff
+}
+.square-b {
+	background: linear-gradient(#7856ff, #65b9ff);
+}
+.square-purple {
+    background-color: purple;
+}
+.square-red {
+    background-color: red;
+}
+
+
+ul {
+	text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:  rgb(17,19,36);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(0, 100, 117);
+}
+
+.active {
+  background-color: #010044;
+}
+.button {
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: #7856ff;
+  border: 1px solid #7856ff;  ;
+}
+
+.button1 {
+  background-color: #7856ff
+  color: black; 
+ 
+  margin-left: 100px;
+  margin-top: 450px;
+  
+}
+
+.button1:hover {
+  background-color:  rgb(120,86,255);
+  color: white;
+}
+
+.button2 {
+  
+	background-color: #7856ff  background-color:rgb(120,86,255);
+  color: black; 
+ 
+}
+
+.button2:hover {
+	background-color:  rgb(120,86,255);
+  color: white;
+}
+.right {
+  float:right;
+  margin-left: auto;
+padding-right: 0px;
+  margin-right: 0;
+  width: 490px;
+  height: 355px;
+}
+
+footer{
+	
+	bottom: 0;
+}
+.footer-distributed{
+	background-color:  rgb(17,19,36);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+ 
+	padding: 55px 50px;
+	margin-top: 80px;
+}
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+ 
+.footer-distributed .footer-left{
+	width: 40%;
+}
+ 
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+ 
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+ 
+ 
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+ 
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+ 
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+ 
+.footer-distributed .footer-center{
+	width: 35%;
+}
+ 
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+ 
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+ 
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+ 
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+ 
+.footer-distributed .footer-center p a{
+	color:  rgb(120,86,255);
+	
+	text-decoration: none;;
+}
+ 
+.footer-distributed .footer-right{
+	width: 20%;
+}
+ 
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+ 
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+ 
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+ 
+
+@media (max-width: 880px) {
+ 
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	
+	}
+ 
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+	.main {
+		line-height: normal;
+		font-size: auto;
+	}
+ 
+
+
+
+</style>
+</head>
+<body>
+<section></section>
+<div class="header">
+<img src="C:\Users\yrakh\OneDrive\Desktop\assets\c1.svg" alt="logo" />
+</div>
+<ul>
+  <li><a class="active" href="#home">Features</a></li>
+  <li><a href="#news">Pricing</a></li>
+  <li><a href="#contact">Resources</a></li>
+  <li><a class="active" href="#home">Customers</a></li>
+  <li><a href="#news">Gallery</a></li>
+  <li><a href="#contact">Agencies</a></li>
+  <li><a class="active" href="#home">Sign up</a></li>
+  <li><a href="#news">Log in</a></li>
+  <li><a href="#contact">Contact us</a></li>
+</ul>
+<section>
+
+<h3>Drive results with unforgettable email marketing.</h3>
+<p>Connecting with your audience has never been easier with Campaign Monitor’s straightforward email marketing and automation tools.
+</p> <img src="C:\Users\yrakh\OneDrive\Desktop\1.png" alt="Paris" class="right"></p>
+<button class="button button1">Sign up for free</button>
+<button class="button button2">Learn more</button>
+</section>
+
+<section>
+<div></div>
+
+<div></div>
+<div class="square square-a">
+<h3>Drive results with unforgettable email marketing.</h3>
+<p>ith our powerful yet easy-to-use tools, it's never been easier to make an impact with email marketing.</p>
+<button class="button button1" >Sign up for free</button>
+</div>
+</section>
+
+<div class="square square-b">
+<p> “We've been using Campaign Monitor for a variety of email needs, beyond just traditional email marketing and newsletters, like using automation to nudge people who haven't completed their profiles in the Girlboss professional network. Overall, we've found all of the features easy for a small, nimble team to use.”
+Lauren Black, Digital Marketing Manager  </p>
+<img src="C:\Users\yrakh\OneDrive\Desktop\13.png">
+<button class="button button2">See Sucess</button>
+</div>
+
+<div class="square square-b">
+<h3> Get started with Campaign Monitor today </h3>
+<p>With our powerful yet easy-to-use tools, it's never been easier to make an impact with email marketing.  </p>
+<button class="button button2">Sign U Free</button>
+</div>
+
+		<footer class="footer-distributed">
+		<div class="footer-left">
+		<h3>Campaign<span>Manager</span></h3>
+		<p class="footer-links">
+		<a href="#">Home</a>
+		<a href="#">Blog</a>
+		<a href="#">Pricing</a>
+		<a href="#">About</a>
+		<a href="#">Faq</a>
+		<a href="#">Contact</a>
+		</p>
+		<p class="footer-company-name">CampaignManager &copy; 2019</p>
+		</div>
+		<div class="footer-center">
+		<div>
+		<i class="fa fa-map-marker"></i>
+		<p><span>PRODUCT</span> Features
+            Pricing
+App Store
+API
+Email Templates
+        </p>
+		</div>
+ 
+		<div>
+		<i class="fa fa-phone"></i>
+		<p>+1 555 123456</p>
+		</div>
+ 
+		<div>
+		<i class="fa fa-envelope"></i>
+		<p><a href="mailto:support@company.com">CM</a></p>
+		</div>
+ 
+		</div>
+ 
+		<div class="footer-right">
+		<p class="footer-company-about">
+		<span>About the company</span>
+        Campaign Monitor is part of the CM Group family of brands.
+		</p>
+ 
+		<div class="footer-icons">
+		<a href="#"><i class="fa fa-facebook"></i></a>
+		<a href="#"><i class="fa fa-twitter"></i></a>
+		<a href="#"><i class="fa fa-linkedin"></i></a>
+		<a href="#"><i class="fa fa-github"></i></a>
+		</div>
+		</div>
+ 
+		</footer>
+</body>
+</html>
+
